@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Avnica Global provides electronics products, IFPD and LED TV installation, AV solutions, repair, maintenance and AMC support in India.">
+  <meta name="theme-color" content="#102b4e">
+  <title>Avnica Global | Electronics, AV Solutions & Service Support</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 
+            navy: '#102b4e', 
+            gold: '#e4b94f',
+            deepBg: '#0b192c'
+          },
+          fontFamily: { 
+            sans: ['"DM Sans"', 'sans-serif'], 
+            display: ['Manrope', 'sans-serif'] 
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      background-color: #0b192c;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(23,59,101,1) 0, transparent 50%), 
+        radial-gradient(at 100% 100%, rgba(20,43,73,1) 0, transparent 50%);
+      background-attachment: fixed;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .glass-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    .glass-input:focus {
+      outline: none;
+      border-color: #e4b94f;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .glow-bg {
+      position: absolute; width: 150px; height: 150px; background: #e4b94f; filter: blur(80px); opacity: 0.15; z-index: -1;
+    }
+
+    /* CSS For The Crossfade Images */
+    .slider-track {
+      position: relative;
+      width: 100%; 
+      height: 100%;
+    }
+    .slider-track img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 25s infinite;
+    }
+    
+    /* 5 images, each gets 5 seconds in a 25s loop */
+    .slider-track img:nth-child(1) { animation-delay: 0s; }
+    .slider-track img:nth-child(2) { animation-delay: 5s; }
+    .slider-track img:nth-child(3) { animation-delay: 10s; }
+    .slider-track img:nth-child(4) { animation-delay: 15s; }
+    .slider-track img:nth-child(5) { animation-delay: 20s; }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      20% { opacity: 1; }
+      25% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="antialiased scroll-smooth">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 glass-panel border-b-0">
+    <div class="max-w-[1400px] mx-auto px-5 md:px-10 h-20 flex items-center justify-between relative">
+      <a href="#home" class="flex items-center">
+        <img src="WhiteLogo.png" alt="Avnica Global Logo" class="h-11 w-auto rounded-xl object-contain">
+      </a>
+      
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" class="md:hidden text-2xl text-white focus:outline-none z-50">
+        ☰
+      </button>
+
+      <!-- Navigation -->
+      <nav id="mainNav" class="hidden absolute top-full left-0 w-full bg-[#0b192c]/95 backdrop-blur-xl flex-col items-center py-6 gap-6 border-b border-white/10 md:static md:w-auto md:bg-transparent md:flex md:flex-row md:py-0 md:gap-10 md:border-none font-semibold text-sm text-gray-200">
+        <a href="#products" class="nav-link hover:text-gold transition">Products</a>
+        <a href="#services" class="nav-link hover:text-gold transition">Services</a>
+        <a href="#about" class="nav-link hover:text-gold transition">About</a>
+        <a href="#contact" class="nav-link px-6 py-2.5 rounded-lg bg-gold text-navy hover:bg-yellow-400 transition font-bold">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- FULL SCREEN HERO SECTION -->
+    <section id="home" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+      
+      <!-- Background Full-Page Slider -->
+      <div class="absolute inset-0 z-0">
+        <!-- Dark overlay reduced for better image visibility -->
+        <div class="absolute inset-0 bg-[#0b192c]/50 z-10"></div>
+        
+        <div class="slider-track w-full h-full">
+          <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=1920" alt="Display Image 1">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1920" alt="Display Image 2">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=1920" alt="Display Image 3">
+          <img src="https://images.unsplash.com/photo-1531297172867-1313d69cb663?auto=format&fit=crop&q=80&w=1920" alt="Display Image 4">
+          <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=1920" alt="Display Image 5">
+        </div>
+      </div>
+
+      <!-- Glowing effects -->
+      <div class="absolute w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[150px] opacity-40 top-0 left-1/4 z-0"></div>
+      <div class="absolute w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[150px] opacity-20 bottom-0 right-1/4 z-0"></div>
+
+      <!-- Centered Content Layer -->
+      <div class="relative z-20 max-w-[1000px] mx-auto px-5 md:px-10 flex flex-col items-center text-center pt-20 pb-10">
+        
+        <p class="text-[10px] md:text-xs font-bold tracking-[0.25em] text-gray-300 mb-4 uppercase">Your Technology Service Partner</p>
+        
+        <h1 class="text-[40px] md:text-6xl xl:text-[72px] font-display font-extrabold leading-[1.1] mb-6 drop-shadow-lg">
+          Electronics Solutions.<br>
+          <span class="text-gold">Reliable Service.</span><br>
+          Nationwide Support.
+        </h1>
+        
+        <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow-md">
+          Product enquiries, professional installation, repair and maintenance for displays, AV equipment and other electronics.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+          <a href="#products" class="px-8 py-3.5 rounded-lg bg-gold text-navy font-bold hover:scale-105 transition transform shadow-[0_0_20px_rgba(228,185,79,0.3)]">Explore Products</a>
+          <a href="#contact" class="px-8 py-3.5 rounded-lg border border-white/40 hover:border-gold hover:text-gold transition font-bold glass-panel">Request a Service</a>
+        </div>
+
+        <!-- Tick Marks (Up to Business Support) -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-300 font-medium glass-panel px-8 py-4 rounded-2xl">
+          <span class="flex items-center gap-2"><div class="w-4 h-4 rounded-full bg-white/10 flex items-center justify-center text-[10px] text-gold">✓</div> Product enquiries</span>
+          <span class="flex items-center gap-2"><div class="w-4 h-4 rounded-full bg-white/10 flex items-center justify-center text-[10px] text-gold">✓</div> Installation & repair</span>
+          <span class="flex items-center gap-2"><div class="w-4 h-4 rounded-full bg-white/10 flex items-center justify-center text-[10px] text-gold">✓</div> Business support</span>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="border-b border-white/10 glass-panel !border-l-0 !border-r-0 !rounded-none relative z-10">
+      <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-10 grid md:grid-cols-3 gap-10">
+        <div class="pl-6 border-l-2 border-gold">
+          <strong class="block font-display font-bold text-xl mb-1">Product Sales</strong>
+          <span class="text-sm text-gray-400">Enquiry-based catalogue</span>
+        </div>
+        <div class="pl-6 border-l-2 border-gold">
+          <strong class="block font-display font-bold text-xl mb-1">Installation</strong>
+          <span class="text-sm text-gray-400">Partner-led pan-India support</span>
+        </div>
+        <div class="pl-6 border-l-2 border-gold">
+          <strong class="block font-display font-bold text-xl mb-1">Repair & Maintenance</strong>
+          <span class="text-sm text-gray-400">Electronics service support</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="max-w-[1400px] mx-auto px-5 md:px-10 py-24">
+      <div class="text-center max-w-2xl mx-auto mb-16 relative">
+        <div class="glow-bg top-0 left-1/2 -translate-x-1/2"></div>
+        <p class="text-[11px] font-bold tracking-[0.2em] text-gold mb-4">OUR PRODUCT RANGE</p>
+        <h2 class="text-3xl md:text-5xl font-display font-extrabold mb-6">Technology for business, education and enterprise</h2>
+        <p class="text-lg text-gray-400">Explore our product categories and contact us for availability, specifications and a customised quotation.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- IFPD -->
+        <article class="glass-panel p-6 rounded-2xl hover:-translate-y-2 transition duration-300 flex flex-col">
+          <a href="Flat Panel.jpg" target="_blank" class="block w-full h-48 mb-6 bg-white/5 rounded-xl overflow-hidden p-4">
+            <img src="Flat Panel.jpg" alt="Interactive Flat Panel" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+          </a>
+          <h3 class="text-2xl font-display font-bold mb-4">Interactive Flat Panel Displays</h3>
+          <p class="text-gray-400 text-sm mb-8 leading-relaxed flex-grow">IFPD solutions for classrooms, meeting rooms and collaborative spaces.</p>
+          <a href="#contact" data-product="Interactive Flat Panel Display" class="text-gold text-sm font-bold hover:text-yellow-300">Enquire about IFPD →</a>
+        </article>
+
+        <!-- OPS -->
+        <article class="glass-panel p-6 rounded-2xl hover:-translate-y-2 transition duration-300 flex flex-col">
+          <a href="Ops computer.jfif" target="_blank" class="block w-full h-48 mb-6 bg-white/5 rounded-xl overflow-hidden p-4">
+            <img src="Ops computer.jfif" alt="OPS Computers" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+          </a>
+          <h3 class="text-2xl font-display font-bold mb-4">OPS Computers</h3>
+          <p class="text-gray-400 text-sm mb-8 leading-relaxed flex-grow">OPS modules and compatible computing options for display systems.</p>
+          <a href="#contact" data-product="OPS Computer" class="text-gold text-sm font-bold hover:text-yellow-300">Enquire about OPS →</a>
+        </article>
+
+        <!-- LED TV -->
+        <article class="glass-panel p-6 rounded-2xl hover:-translate-y-2 transition duration-300 flex flex-col">
+          <a href="Led Tv.jpg" target="_blank" class="block w-full h-48 mb-6 bg-white/5 rounded-xl overflow-hidden p-4">
+            <img src="Led Tv.jpg" alt="LED TVs" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+          </a>
+          <h3 class="text-2xl font-display font-bold mb-4">LED TVs & Displays</h3>
+          <p class="text-gray-400 text-sm mb-8 leading-relaxed flex-grow">Display products for home, office, education and commercial use.</p>
+          <a href="#contact" data-product="LED TV or Display" class="text-gold text-sm font-bold hover:text-yellow-300">Enquire about displays →</a>
+        </article>
+
+        <!-- Video Wall -->
+        <article class="glass-panel p-6 rounded-2xl hover:-translate-y-2 transition duration-300 flex flex-col">
+          <a href="Video Wall.webp" target="_blank" class="block w-full h-48 mb-6 bg-white/5 rounded-xl overflow-hidden p-4">
+            <img src="Video Wall.webp" alt="Video Walls" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+          </a>
+          <h3 class="text-2xl font-display font-bold mb-4">Video Walls & Digital Kiosks</h3>
+          <p class="text-gray-400 text-sm mb-8 leading-relaxed flex-grow">Visual communication and digital information display solutions.</p>
+          <a href="#contact" data-product="Video Wall or Digital Kiosk" class="text-gold text-sm font-bold hover:text-yellow-300">Enquire about AV displays →</a>
+        </article>
+
+        <!-- PTZ Camera -->
+        <article class="glass-panel p-6 rounded-2xl hover:-translate-y-2 transition duration-300 flex flex-col">
+          <a href="PTZ camera.jfif" target="_blank" class="block w-full h-48 mb-6 bg-white/5 rounded-xl overflow-hidden p-4">
+            <img src="PTZ camera.jfif" alt="PTZ Cameras" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+          </a>
+          <h3 class="text-2xl font-display font-bold mb-4">PTZ Cameras & AV Solutions</h3>
+          <p class="text-gray-400 text-sm mb-8 leading-relaxed flex-grow">Camera and audiovisual equipment for meetings, learning and presentations.</p>
+          <a href="#contact" data-product="PTZ Camera or AV Solution" class="text-gold text-sm font-bold hover:text-yellow-300">Enquire about AV →</a>
+        </article>
+
+        <!-- Robotics Kits -->
+        <article class="glass-panel p-6 rounded-2xl hover:-translate-y-2 transition duration-300 flex flex-col">
+          <a href="Robotic Kits.avif" target="_blank" class="block w-full h-48 mb-6 bg-white/5 rounded-xl overflow-hidden p-4">
+            <img src="Robotic Kits.avif" alt="Robotics Kits" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+          </a>
+          <h3 class="text-2xl font-display font-bold mb-4">IT Products & Robotics Kits</h3>
+          <p class="text-gray-400 text-sm mb-8 leading-relaxed flex-grow">Selected IT products, educational robotics kits and lab-related solutions.</p>
+          <a href="#contact" data-product="IT Product or Robotics Kit" class="text-gold text-sm font-bold hover:text-yellow-300">Enquire about IT products →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="relative py-28 border-t border-white/10 bg-navy/30">
+      <div class="max-w-[1400px] mx-auto px-5 md:px-10">
+        <div class="text-center max-w-3xl mx-auto mb-20 relative">
+          <p class="text-[11px] font-bold tracking-[0.2em] text-gold mb-4">INSTALLATION • REPAIR • SUPPORT</p>
+          <h2 class="text-3xl md:text-5xl font-display font-extrabold mb-6">Service support that keeps your equipment working</h2>
+          <p class="text-lg text-gray-300">Share your equipment details and location so we can review your requirement and confirm service availability.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <article class="glass-panel p-8 rounded-3xl">
+            <span class="block text-4xl font-display font-extrabold text-gold opacity-50 mb-6">01</span>
+            <h3 class="text-xl font-bold mb-3">Installation & Commissioning</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">IFPD, LED TV, signage and display installation, including wall-mount or stand-based setup where applicable.</p>
+          </article>
+          <article class="glass-panel p-8 rounded-3xl">
+            <span class="block text-4xl font-display font-extrabold text-gold opacity-50 mb-6">02</span>
+            <h3 class="text-xl font-bold mb-3">Repair & Diagnostics</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Fault diagnosis and repair support for display equipment, PCBs, motherboards and power boards, subject to evaluation.</p>
+          </article>
+          <article class="glass-panel p-8 rounded-3xl">
+            <span class="block text-4xl font-display font-extrabold text-gold opacity-50 mb-6">03</span>
+            <h3 class="text-xl font-bold mb-3">Maintenance & AMC</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Maintenance and service-support proposals for organisations, institutions, schools and business customers.</p>
+          </article>
+          <article class="glass-panel p-8 rounded-3xl">
+            <span class="block text-4xl font-display font-extrabold text-gold opacity-50 mb-6">04</span>
+            <h3 class="text-xl font-bold mb-3">Pan-India Coordination</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Service coordination through available service partners. Coverage, visit timelines and travel charges are confirmed per location.</p>
+          </article>
+        </div>
+        <div class="mt-12 glass-panel p-6 rounded-2xl border-l-4 border-l-gold text-base font-medium text-gray-300 text-center">
+          Service availability, response time, parts, travel and pricing are confirmed after reviewing the location and equipment details.
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="max-w-[1400px] mx-auto px-5 md:px-10 py-28 grid md:grid-cols-2 gap-20 items-center">
+      <div class="glass-panel h-[500px] rounded-[3rem] flex flex-col items-center justify-center relative overflow-hidden">
+        <div class="absolute w-[150%] h-[150%] rounded-full border border-white/10 animate-[spin_20s_linear_infinite]"></div>
+        <div class="absolute w-[120%] h-[120%] rounded-full border border-white/5 animate-[spin_15s_linear_infinite_reverse]"></div>
+        <span class="text-5xl font-display font-extrabold text-center relative z-10 tracking-widest">AVNICA<br>GLOBAL</span>
+        <small class="text-[11px] text-gold tracking-[0.2em] mt-6 relative z-10 font-bold">TECHNOLOGY • SERVICE • TRUST</small>
+      </div>
+      <div>
+        <p class="text-[11px] font-bold tracking-[0.2em] text-gold mb-4">ABOUT AVNICA GLOBAL</p>
+        <h2 class="text-3xl md:text-5xl font-display font-extrabold mb-8 leading-tight">One point of contact for products and service requirements</h2>
+        <p class="text-lg text-gray-400 mb-8 leading-relaxed">Avnica Global supports customers with electronics product enquiries, installation coordination, repair services and maintenance requirements. We aim to make service communication clear, professional and dependable.</p>
+        <ul class="space-y-4 text-base text-gray-300 mb-10">
+          <li class="flex items-start gap-4"><span class="text-gold font-bold mt-1">✓</span> Business-focused product and service enquiries</li>
+          <li class="flex items-start gap-4"><span class="text-gold font-bold mt-1">✓</span> Support for education, office and enterprise environments</li>
+          <li class="flex items-start gap-4"><span class="text-gold font-bold mt-1">✓</span> Clear quotation and service-scope confirmation</li>
+          <li class="flex items-start gap-4"><span class="text-gold font-bold mt-1">✓</span> Service coordination based on location and partner availability</li>
+        </ul>
+        <a href="#contact" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 transition font-bold text-lg inline-block">Discuss Your Requirement</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="relative py-28 border-t border-white/10 bg-navy/20">
+      <div class="max-w-[1400px] mx-auto px-5 md:px-10 grid lg:grid-cols-2 gap-20 items-start relative z-10">
+        <div>
+          <p class="text-[11px] font-bold tracking-[0.2em] text-gold mb-4">LET'S TALK</p>
+          <h2 class="text-5xl font-display font-extrabold mb-8">Tell us what you need</h2>
+          <p class="text-xl text-gray-400 mb-12 max-w-lg leading-relaxed">Request a product quotation, installation, repair or maintenance support. Complete the form and your email app will open with the enquiry details ready to send.</p>
+          
+          <div class="space-y-8">
+            <div>
+              <span class="block text-[11px] font-bold tracking-widest text-gray-500 mb-2">PHONE</span>
+              <a href="tel:+919319035468" class="font-bold text-2xl hover:text-gold transition">+91 93190 35468</a>
+            </div>
+            <div>
+              <span class="block text-[11px] font-bold tracking-widest text-gray-500 mb-2">EMAIL</span>
+              <a href="mailto:avnicaglobal@gmail.com" class="font-bold text-2xl hover:text-gold transition">avnicaglobal@gmail.com</a>
+            </div>
+            <div>
+              <span class="block text-[11px] font-bold tracking-widest text-gray-500 mb-2">WEBSITE</span>
+              <a href="https://avnicaglobal.com" class="font-bold text-2xl hover:text-gold transition">avnicaglobal.com</a>
+            </div>
+          </div>
+          <a href="https://wa.me/919319035468?text=Hello%20Avnica%20Global%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" class="inline-block mt-12 text-green-400 font-bold text-lg hover:text-green-300">Chat on WhatsApp ↗</a>
+        </div>
+        
+        <form id="enquiryForm" class="glass-panel p-10 md:p-12 rounded-[2rem]">
+          <h3 class="text-3xl font-display font-bold mb-8">Business Enquiry</h3>
+          
+          <div class="space-y-5">
+            <div>
+              <label class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide" for="name">Your name *</label>
+              <input class="w-full px-5 py-4 rounded-xl glass-input text-base" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide" for="company">Company / Organisation</label>
+              <input class="w-full px-5 py-4 rounded-xl glass-input text-base" id="company" name="company" placeholder="Company name (optional)">
+            </div>
+            <div class="grid grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide" for="email">Email address *</label>
+                <input class="w-full px-5 py-4 rounded-xl glass-input text-base" type="email" id="email" name="email" required placeholder="you@example.com">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide" for="phone">Phone number *</label>
+                <input class="w-full px-5 py-4 rounded-xl glass-input text-base" type="tel" id="phone" name="phone" required placeholder="Your contact number">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide" for="type">Enquiry type *</label>
+              <select class="w-full px-5 py-4 rounded-xl glass-input text-base [&>option]:bg-navy" id="type" name="type" required>
+                <option value="">Choose an enquiry</option>
+                <option>Product quotation</option>
+                <option>Installation</option>
+                <option>Repair / diagnostics</option>
+                <option>AMC / maintenance</option>
+                <option>Service partnership</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="grid grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide" for="product">Product / equipment</label>
+                <input class="w-full px-5 py-4 rounded-xl glass-input text-base" id="product" name="product" placeholder="e.g. 75-inch IFPD">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide" for="location">City / PIN code</label>
+                <input class="w-full px-5 py-4 rounded-xl glass-input text-base" id="location" name="location" placeholder="Service location">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-wide" for="message">Requirement details *</label>
+              <textarea class="w-full px-5 py-4 rounded-xl glass-input text-base" id="message" name="message" rows="4" required placeholder="Please describe your requirement"></textarea>
+            </div>
+            <button class="w-full py-4 mt-6 rounded-xl bg-gold text-navy font-bold hover:bg-yellow-400 transition text-lg" type="submit">Prepare Email Enquiry →</button>
+            <p class="text-[11px] text-gray-400 text-center mt-6">This form prepares an email on your device; it does not submit data to a server.</p>
+            <p id="formStatus" class="text-sm text-green-400 text-center mt-2"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-panel border-t border-white/10 mt-0 !border-x-0 !border-b-0 !rounded-none">
+    <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-12 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/10">
+      <div>
+        <a href="#home" class="flex items-center mb-4">
+          <img src="LOGO.png" alt="Avnica Global Logo" class="h-10 w-auto rounded-xl object-contain">
+        </a>
+        <p class="text-sm text-gray-400 max-w-md">Electronics product enquiries, installation, repair and maintenance support.</p>
+      </div>
+      <a href="#home" class="text-sm text-gold hover:text-yellow-300 font-bold bg-white/5 px-6 py-3 rounded-xl border border-white/10">Back to top ↑</a>
+    </div>
+    <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-6 flex flex-col md:flex-row justify-between text-xs text-gray-500 font-medium">
+      <span>© <span id="year"></span> Avnica Global. All rights reserved.</span>
+      <span class="mt-2 md:mt-0">Product availability and service coverage are subject to confirmation.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger Menu Logic
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('hidden');
+      mainNav.classList.toggle('flex');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          mainNav.classList.add('hidden');
+          mainNav.classList.remove('flex');
+        }
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('[data-product]').forEach(link => {
+      link.addEventListener('click', () => {
+        const productInput = document.getElementById('product');
+        if (productInput) productInput.value = link.dataset.product;
+      });
+    });
+
+    document.getElementById('enquiryForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const fields = [
+        ['Name', data.get('name')],
+        ['Company / Organisation', data.get('company') || 'Not provided'],
+        ['Email', data.get('email')],
+        ['Phone', data.get('phone')],
+        ['Enquiry type', data.get('type')],
+        ['Product / equipment', data.get('product') || 'Not provided'],
+        ['City / PIN code', data.get('location') || 'Not provided'],
+        ['Requirement details', data.get('message')]
+      ];
+      const body = fields.map(([label, value]) => `${label}: ${value}`).join('\n');
+      const subject = `Avnica Global Website Enquiry - ${data.get('type')}`;
+      const mailto = `mailto:avnicaglobal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      document.getElementById('formStatus').textContent = 'Opening your email app...';
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
